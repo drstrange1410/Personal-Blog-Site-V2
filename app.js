@@ -57,7 +57,7 @@ async function findPost(reqPostID) {
 
 app.get('/posts/:postID', function (req, res) {
   var reqPostID = req.params.postID;
-  console.log(reqPostID);
+  //console.log(reqPostID);
   findPost(reqPostID).then(function (post) {
     res.render('post', { post: post });
     //console.log(post);
