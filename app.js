@@ -5,7 +5,6 @@ const _ = require('lodash');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
-
 mongoose.connect(process.env.BACKUP_URI);
 
 const postSchema = new mongoose.Schema({
