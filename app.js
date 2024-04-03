@@ -3,10 +3,10 @@ const bodyParser = require('body-parser');
 const ejs = require('ejs');
 const _ = require('lodash');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect(
-  'mongodb+srv://Cluster90555:test123@cluster90555.ymlphtg.mongodb.net/blogDB?retryWrites=true&w=majority&appName=Cluster90555'
-);
+
+mongoose.connect(process.env.BACKUP_URI);
 
 const postSchema = new mongoose.Schema({
   title: String,
